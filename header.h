@@ -20,6 +20,7 @@ struct Item
 void data(vector<Item>& item, int& size);
 
 void add(vector<Item>& item, int& size);
+void remove(vector<Item>& item, int& size);
 
 void find(vector<Item>& item, int& size);
 void find(vector<Item>& item, int& size, int& n);
