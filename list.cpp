@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void find(vector<Item>& item, int& size, int& n)
+void list(vector<Item>& item, int& size, int& n)
 {
 	bool tf = true;
 	int count = 0, date = 0, a = 0;
@@ -15,43 +15,55 @@ void find(vector<Item>& item, int& size, int& n)
 	vector<int> num;
 	num.reserve(size);
 
-	print(n);
-
 	do
 	{
-		if (n == 4)
+		switch (n)
 		{
+		case 1:
+			cout << " Date of day";
 			date = Date();
-		}
-		else
-		{
-			getline(cin, fname);
-		}
 
-		for (int i = 0; i < size; i++)
-		{
-			if (n != 4)
+			for (int i = 0; i < size; i++)
 			{
-				if (n == 1) txt = item[i].name;
-				if (n == 2) txt = item[i].priority;
-				if (n == 3) txt = item[i].description;
-
-				if (txt.find(fname) != -1)
+				if (date == item[i].date[0]*10000 + item[i].date[1] * 100 + item[i].date[2])
 				{
 					num.push_back(i);
 					count++;
 					tf = false;
 				}
 			}
-			if (n == 4)
+			break;
+
+		case 2:
+			cout << " Start date";
+			date = Date();
+
+			for (int i = 0; i < size; i++)
 			{
-				if (date == item[i].date[0] * 10000 + item[i].date[1] * 100 + item[i].date[2])
+				if ((item[i].date[0] * 10000 + item[i].date[1] * 100 + item[i].date[2] >= date) && 
+					(item[i].date[0] * 10000 + item[i].date[1] * 100 + item[i].date[2] < date + 7))
 				{
 					num.push_back(i);
 					count++;
 					tf = false;
 				}
 			}
+			break;
+
+		case 3:
+			cout << " Enter \"Month\" -> ";
+			date = checkV();
+
+			for (int i = 0; i < size; i++)
+			{
+				if (date == item[i].date[1])
+				{
+					num.push_back(i);
+					count++;
+					tf = false;
+				}
+			}
+			break;
 		}
 
 		if (tf)
@@ -75,28 +87,28 @@ void find(vector<Item>& item, int& size, int& n)
 	} while (tf != false);
 }
 
-void find(vector<Item>& item, int& size)
+void list(vector<Item>& item, int& size)
 {
 	int n = 0;
 
 	while (true)
 	{
 		cout
-			<< "\n\t1 - by name"
-			<< "\n\t2 - by priority"
-			<< "\n\t3 - by description"
-			<< "\n\t4 - by date"
+			<< "\n\t1 - for day"
+			<< "\n\t2 - for week"
+			<< "\n\t3 - for month"
 			<< endl;
 		cout << "\n Enter number subpositioin -> ";
 
 	restart:
 		n = checkV();
-		if (n > 4 || n == 0)
+		if (n > 3 || n == 0)
 		{
-			cout << "\n\t Number is out of range 1...4";
+			cout << "\n Number is out of range 1...3";
+			cout << "\n Enter number subpositioin -> ";
 			goto restart;
 		}
-		find(item, size, n);
+		list(item, size, n);
 
 		cout << "\n Press \"0\" - stop or \"1\" - continue: ";
 		n = checkV();

@@ -129,7 +129,9 @@
   <ItemGroup>
     <ClCompile Include="checkV.cpp" />
     <ClCompile Include="data.cpp" />
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="find.cpp" />
+    <ClCompile Include="list.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="print.cpp" />
   </ItemGroup>

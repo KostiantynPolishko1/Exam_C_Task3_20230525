@@ -11,8 +11,8 @@ using namespace std;
 ((x1 < 10 ? "0" + to_string(x1) : to_string(x1)) + ":" +\
 (x2 < 10 ? "0" + to_string(x2) : to_string(x2)))
 
-#define date1(y1, y2) ((item[i].date[1] < 10 ? "0" + to_string(item[i].date[1]) : to_string(item[i].date[1])) \
-+ "." + (item[i].date[2] < 10 ? "0" + to_string(item[i].date[2]) : to_string(item[i].date[2])))
+#define date1(y1, y2) ((y1 < 10 ? "0" + to_string(y1) : to_string(y1)) \
++ "." + (y2 < 10 ? "0" + to_string(y2) : to_string(y2)))
 
 void print(vector<Item>& item, int& size)
 {
