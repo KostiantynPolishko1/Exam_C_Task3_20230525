@@ -8,12 +8,14 @@ using namespace std;
 
 int main()
 {
-	int size = 5;
+	int size = 10;
 	vector<Item> item;
 	item.reserve(size);
 
 	data(item, size);
 	print(item, size);
+
+	find(item, size);
 
 	return 0;
 }

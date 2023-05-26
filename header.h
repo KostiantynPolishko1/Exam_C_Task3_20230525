@@ -18,8 +18,15 @@ struct Item
 #define HEADER_H
 
 void data(vector<Item>& item, int& size);
-void print(vector<Item>& item, int& size);
 
+void find(vector<Item>& item, int& size);
+void find(vector<Item>& item, int& size, int& n);
+
+void print(vector<Item>& item, int& size);
+void print(vector<Item>& item, vector<int>& num);
+void print(int& n);
+
+int Date();
 int checkV();
 
 #endif
