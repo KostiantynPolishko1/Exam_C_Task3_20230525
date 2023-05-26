@@ -16,7 +16,8 @@ int main()
 	print(item, size);
 
 	//add(item, size);
-	remove(item, size);
+	//remove(item, size);
+	modify(item, size);
 	//find(item, size);
 	//list(item, size);
 	//sort(item, size);

@@ -21,6 +21,7 @@ void data(vector<Item>& item, int& size);
 
 void add(vector<Item>& item, int& size);
 void remove(vector<Item>& item, int& size);
+void modify(vector<Item>& item, int& size);
 
 void find(vector<Item>& item, int& size);
 void find(vector<Item>& item, int& size, int& n);
@@ -35,8 +36,12 @@ void print(vector<Item>& item, vector<int>& num);
 void print(int& n);
 
 int Date();
+
 Item Date(Item *temp, int &i);
+vector<Item> Date(vector<Item>& item, int& i);
+
 Item Time(Item* temp, int& i);
+vector<Item> Time(vector<Item>& item, int& i);
 
 int checkV();
 

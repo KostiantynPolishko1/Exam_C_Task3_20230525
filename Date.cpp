@@ -33,6 +33,20 @@ Item Date(Item *temp, int &i)
 	return *temp;
 }
 
+vector<Item> Date(vector<Item>& item, int& i)
+{
+	cout << "\n Enter: " << "Year -> ";
+	item[i].date[0] = checkV();
+
+	cout << "\t Month -> ";
+	item[i].date[1] = checkV();
+
+	cout << "\t Day -> ";
+	item[i].date[2] = checkV();
+
+	return item;
+}
+
 Item Time(Item* temp, int& i)
 {
 	cout << "\n Enter: " << "Hours -> ";
@@ -42,4 +56,15 @@ Item Time(Item* temp, int& i)
 	temp[i].time[1] = checkV();
 
 	return *temp;
+}
+
+vector<Item> Time(vector<Item>& item, int& i)
+{
+	cout << "\n Enter: " << "Hours -> ";
+	item[i].time[0] = checkV();
+
+	cout << "\t Minutes -> ";
+	item[i].time[1] = checkV();
+
+	return item;
 }
