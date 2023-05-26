@@ -48,4 +48,5 @@ void modify(vector<Item>& item, int& size)
 		}
 		i = 0;
 	}
+	print();
 }

@@ -11,10 +11,7 @@ void remove(vector<Item>& item, int& size)
 	cout << "\n Enter qty of position to delete: ";
 	n = checkV();
 
-	int size2 = size - n;
 	int* arr = new int[n];
-
-	cout << endl;
 
 	while (j < n)
 	{
@@ -35,12 +32,14 @@ void remove(vector<Item>& item, int& size)
 		pos = arr[i] - i;
 		auto iter = item.cbegin();
 		item.erase(iter + pos);
+		size--;
 	}
-	item.resize(size2);
+	item.resize(size);
 
 	delete[] arr;
 	arr = nullptr;
 
 	system("CLS");
-	print(item, size2);
+	print(item, size);
+	print();
 }

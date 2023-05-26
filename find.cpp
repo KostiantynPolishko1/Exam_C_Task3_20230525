@@ -65,7 +65,11 @@ void find(vector<Item>& item, int& size, int& n)
 				break;
 			}
 			else
+			{
+				print(n);
 				continue;
+			}
+				
 		}
 
 		num.resize(count);
@@ -103,6 +107,7 @@ void find(vector<Item>& item, int& size)
 		if (!n)
 		{
 			cout << "\n\tSTOP. EXIT\n";
+			print();
 			break;
 		}
 	}

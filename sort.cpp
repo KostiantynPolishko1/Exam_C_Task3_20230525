@@ -77,6 +77,7 @@ void sort(vector<Item>& item, int& size)
 		{
 			system("CLS");
 			cout << "\n\tSTOP. EXIT\n";
+			print();
 			break;
 		}
 

@@ -85,6 +85,8 @@ void list(vector<Item>& item, int& size, int& n)
 		print(item, num);
 
 	} while (tf != false);
+
+
 }
 
 void list(vector<Item>& item, int& size)
@@ -115,6 +117,7 @@ void list(vector<Item>& item, int& size)
 		if (!n)
 		{
 			cout << "\n\tSTOP. EXIT\n";
+			print();
 			break;
 		}
 	}

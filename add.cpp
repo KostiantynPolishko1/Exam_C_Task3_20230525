@@ -10,37 +10,41 @@ void add(vector<Item>& item, int& size)
 	int n = 0, i = 0;
 	cout << "\n Enter qty new position to add: ";
 	n = checkV();
-
-	int size2 = size + n;
-	item.reserve(size2);
+	int n2 = n;
 
 	Item* temp = new Item[n];
 
 	while (i < n)
 	{
-		cout << "\n Pos " << size + 1;
-		cout << "\n Name: ";
+		size++;
+		item.reserve(size);
+		
+		cout << "\n Pos " << size << endl;
+		n2--;
+		cout << " Name: ";
 		getline(cin, temp[i].name);
 
-		cout << "\n Priority: ";
+		cout << " Priority: ";
 		getline(cin, temp[i].priority);
 
-		cout << "\n Description: ";
+		cout << " Description: ";
 		getline(cin, temp[i].description);
 
-		cout << "\n Date: ";
+		cout << " Date: ";
 		Date(temp, i);
 
-		cout << "\n Time: ";
+		cout << " Time: ";
 		Time(temp, i);
 
 		item.push_back(temp[i]);
 		i++;
+
 		system("CLS");
+		print(item, size);
 	}
 
 	delete[] temp;
 	temp = nullptr;
 
-	print(item, size2);
+	print();
 }
