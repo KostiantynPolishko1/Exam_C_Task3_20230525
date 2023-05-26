@@ -19,6 +19,8 @@ struct Item
 
 void data(vector<Item>& item, int& size);
 
+void add(vector<Item>& item, int& size);
+
 void find(vector<Item>& item, int& size);
 void find(vector<Item>& item, int& size, int& n);
 
@@ -32,6 +34,9 @@ void print(vector<Item>& item, vector<int>& num);
 void print(int& n);
 
 int Date();
+Item Date(Item *temp, int &i);
+Item Time(Item* temp, int& i);
+
 int checkV();
 
 #endif

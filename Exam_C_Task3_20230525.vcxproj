@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="add.cpp" />
     <ClCompile Include="checkV.cpp" />
     <ClCompile Include="data.cpp" />
     <ClCompile Include="Date.cpp" />

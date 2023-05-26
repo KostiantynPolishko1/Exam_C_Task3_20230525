@@ -15,9 +15,10 @@ int main()
 	data(item, size);
 	print(item, size);
 
+	add(item, size);
 	//find(item, size);
 	//list(item, size);
-	sort(item, size);
+	//sort(item, size);
 
 	return 0;
 }

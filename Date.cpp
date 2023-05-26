@@ -18,3 +18,28 @@ int Date()
 
 	return year * 10000 + month * 100 + day;
 }
+
+Item Date(Item *temp, int &i)
+{
+	cout << "\n Enter: " << "Year -> ";
+	temp[i].date[0] = checkV();
+
+	cout << "\t Month -> ";
+	temp[i].date[1] = checkV();
+
+	cout << "\t Day -> ";
+	temp[i].date[2] = checkV();
+
+	return *temp;
+}
+
+Item Time(Item* temp, int& i)
+{
+	cout << "\n Enter: " << "Hours -> ";
+	temp[i].time[0] = checkV();
+
+	cout << "\t Minutes -> ";
+	temp[i].time[1] = checkV();
+
+	return *temp;
+}
