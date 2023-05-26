@@ -134,6 +134,7 @@
     <ClCompile Include="list.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="print.cpp" />
+    <ClCompile Include="sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />

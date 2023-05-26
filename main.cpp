@@ -16,7 +16,8 @@ int main()
 	print(item, size);
 
 	//find(item, size);
-	list(item, size);
+	//list(item, size);
+	sort(item, size);
 
 	return 0;
 }
